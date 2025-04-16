@@ -53,7 +53,7 @@ header a:hover {
 }
 
 section {
-    height: 80vh;
+    min-height: 80vh;
     /* vh -> viewport height (altura da viewport) */
     margin: 2rem;
     scroll-margin-top: 4rem;
@@ -62,6 +62,73 @@ section {
     overflow: hidden;
 }
 
+section#formacaoAcademica,
+section#hardSkills {
+    border:none;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 p {
     margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+}
+
+input[type="text"],
+input[type="email"],
+input,
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: .25rem .75rem;
+    color:rgb(0, 0, 0);
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: rgb(232, 131, 232);
+    color:rgb(0, 0, 0);
+    padding: .25rem .75rem;
+    border: none;
+    font-weight: 200;
+}
+
+/* ESTILOS */
+
+.card {
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    list-style: none;
+}
+
+.titulo-card {
+    font-weight: bold;
+    color:rgb(232, 131, 232);
+    font-size: 1.3rem;
+}
+.instituição-card {
+    font-size: 1.1rem;
+    color:rgb(0, 0, 0);
+}
+.cards-em-coluna{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.cards-em-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
