@@ -8,11 +8,6 @@ body {
         background-color: rgb(232, 131, 232, 0.425);
     }
 
-    ul:not(header ul) {
-        list-style-type: square;
-    }
-}
-
 h1 {
     font-size: 2em;
     /* 1rem = 16px  ->  1em = 'M' */
@@ -132,3 +127,27 @@ input[type="submit"] {
     flex-direction: row;
     gap: 1rem;
 }
+
+a:not(header a) {
+    color: rgba(26, 72, 212, 0.991);
+    text-decoration: underline;
+}
+
+a:not(header a):visited{
+    color:rgb(232, 131, 232)
+}
+
+a:hover {
+    color:rgb(232, 131, 232)
+}
+
+a:active {
+    color:rgb(208, 2, 84)
+}
+
+#rodape {
+    background-color: rgba(232, 131, 232, 0.687);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  };
