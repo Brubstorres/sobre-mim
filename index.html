@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
     <head>
         <!-- Meta informações sobre a página -->
          <meta charset="utf-8">
@@ -23,17 +23,19 @@
                 <li><a href="#meusProjetos">Meus projetos</a></li>
                 <li><a href="#meusArtigos">Meus artigos</a></li>
                 <li><a href="#rodape">Contato</a></li>
+                <li><span id="botão-tema">🌞</span></li>
+                <li><span id="botao-contraste">🌓</span></li>
             </ul>
         </header>
 
         <section id="sobreMim">
         <h1>Sobre mim</h1>
-        <p>Meu nome é Bruna, tenho 15 anos e faço parte de uma equipe de robotica que compete na 
-            FIRST na modalidade FRC (First Robotics Competition), estou no 2° Ensino Médio, e 
-            estou cursando Análise e desenvolvimento de sistema no Senai Conde José Vicente de Azevedo.</p>
         <img src="bruna4.jpg" 
         alt="Foto de uma mulher branca, com cabelos cacheados" width="180" 
         title="Foto sugerida pelo git hub da cor rosa e branco">
+        <p>Meu nome é Bruna, tenho 15 anos e faço parte de uma equipe de robotica que compete na 
+            FIRST na modalidade FRC (First Robotics Competition), estou no 2° Ensino Médio, e 
+            estou cursando Análise e desenvolvimento de sistema no Senai Conde José Vicente de Azevedo.</p>
 
         <ul>
             <li>
@@ -177,7 +179,59 @@
           </section>
 
         <section id="meusArtigos">
-            <h2>Meus artigos</h2>
+            <h2 class="titulo-secao">Meus artigos</h2>
+
+            <div class="artigos cards-em-linha">
+
+                <article class="card">
+                    <header>
+                        <h3 class="card-titulo">Portifólio profissional usando GitHub Pages</h3>
+                        <span class="data-publicacao">15 abr 2025</span>
+                        <span class="autor">Bruna Torres</span>
+                    </header>
+
+                    <p>Crie e publique seu portifólio profissional usando GitHub Pages, 
+                        uma maneira fácil e gratuita de mostrar seus projetos e habilidades</p>
+
+                        <footer>
+                            <button type="button" class="botao botao-continue">Continue lendo</button>
+                            <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                        </footer>
+
+                </article>
+
+                <article class="card">
+                    <header>
+                        <h3 class="card-titulo">5 passos para começar na robótica</h3>
+                        <span class="data-publicacao">18 fev 2025</span>
+                        <span class="autor">Bruna Torres</span>
+                    </header>
+                
+                    <p>Quer entrar no mundo da robótica? Veja por onde começar, 
+                        mesmo sem saber programar, com dicas simples e acessíveis.</p>
+                    
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                    </footer>
+                </article>
+
+                <article class="card">
+                    <header>
+                        <h3 class="card-titulo">Como aprendi lógica de programação com jogos</h3>
+                        <span class="data-publicacao">02 mar 2025</span>
+                        <span class="autor">Bruna Torres</span>
+                    </header>
+                
+                    <p>Descubra como jogos simples ajudaram no meu aprendizado de lógica de programação de forma divertida e prática.</p>
+                    
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                    </footer>
+                </article>
+                
+            </div>
         </section>
         
         <section id="contato">
@@ -207,5 +261,34 @@
             </ul>
             <p>Desenvolvido por Bruna Torres❤️</p>
         </footer>
+        <script>
+            document.querySelector('#botão-tema').addEventListener('click', trocaTema);
+
+            function trocaTema() {
+                //troca o tema da pagina
+                const root = document.documentElement;
+
+                if (root.getAttribute('data-theme') === 'dark') {
+                    root.removeAttribute('data-theme');
+                } else {
+                    root.setAttribute('data-theme', 'dark');
+                }
+            }
+        </script>
+
+<script>
+    document.querySelector('#botao-contraste').addEventListener('click', trocaContraste);
+
+    function trocaContraste() {
+        // troca para o tema de alto contraste
+        const root = document.documentElement;
+
+        if (root.getAttribute('data-theme') === 'contraste') {
+            root.removeAttribute('data-theme');
+        } else {
+            root.setAttribute('data-theme', 'contraste');
+        }
+    }
+</script>
     </body>
 </html>
